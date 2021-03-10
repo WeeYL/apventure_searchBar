@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+// import SearchPage from "./Components/SearchPage";
+// import React from "react";
 
-function App() {
+// export function App() {
+//   return <SearchPage />;
+// }
+
+
+
+import React from 'react';
+import Select from 'react-select';
+import makeAnimated from 'react-select/animated';
+import { colourOptions } from './docs/data';
+
+const animatedComponents = makeAnimated();
+
+export function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+<Select
+  closeMenuOnSelect={false}
+  components={animatedComponents}
+  defaultValue={[colourOptions[4], colourOptions[5]]}
+  isMulti
+  options={colourOptions}
+/>
   );
 }
 
