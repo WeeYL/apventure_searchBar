@@ -10,14 +10,14 @@ const SearchBar = ({ searchQuery, setSearchQuery }) => {
   return (
     <form action='/' method='get' autoComplete='off' onSubmit={onSubmit}>
       <label htmlFor='header-search'>
-        <span className='visually-hidden'>Search blog posts</span>
+        <span className='visually-hidden'>Search keyword</span>
       </label>
       <input
         value={searchQuery}
         onInput={(e) => setSearchQuery(e.target.value)}
         type='text'
         id='header-search'
-        placeholder='Search blog posts'
+        placeholder='Search Keyword'
         name='s'
       />
       <button type='submit'>Search</button>
